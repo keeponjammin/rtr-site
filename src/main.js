@@ -1,5 +1,33 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import router from './router'
 
-createApp(App).mount('#app')
+import { VueFire, VueFireFirestoreOptionsAPI, VueFireAuth } from 'vuefire'
+import { firebaseApp } from './firebase'
+import './assets/main.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas)
+library.add(fab)
+
+const app = createApp(App)
+
+app
+  .use(VueFire, {
+    firebaseApp,
+    modules: [
+      VueFireAuth(),
+      VueFireFirestoreOptionsAPI({
+        // this would be the same behavior as VueFire v2
+        reset: true,
+        wait: false,
+      }),
+    ],
+  })
+
+app.use(router)
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.mount('#app')
