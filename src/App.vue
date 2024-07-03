@@ -1,25 +1,26 @@
-<script setup></script>
+<script setup>
+import Header from "./components/header/Header.vue";
+// import NavBar from "./components/navbar/NavBar.vue";
+import Home from "./components/home/Home.vue";
+// import About from "./components/about/About.vue";
+// import Music from "./components/music/Music.vue";
+// import Events from "./components/events/Events.vue";
+// import Contact from "./components/contact/Contact.vue";
+// import Footer from "./components/footer/Footer.vue";
+</script>
 
 <template>
-  <div>
-    <a
-      href="https://www.instagram.com/releasetheriverofficial/"
-      target="_blank"
-    >
-      <img src="/logo.svg" class="logo" alt="Release the river logo" />
-    </a>
-  </div>
+  <main>
+    <Header />
+    <!-- <NavBar /> -->
+    <Home />
+    <!-- <About />
+    <Music />
+    <Events />
+    <Contact /> -->
+  </main>
+  <!-- <footer>
+    <Footer />
+  </footer> -->
 </template>
-
-<style scoped>
-.logo {
-  color: #fff;
-  height: 20em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #fff);
-}
-</style>
+<style lang="scss" scoped></style>

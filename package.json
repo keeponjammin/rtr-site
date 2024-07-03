@@ -1,18 +1,23 @@
 {
   "name": "rtr-site",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "vue": "^3.4.21"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "vite": "^5.1.6"
+    "@types/node": "^20.14.9",
+    "sass": "^1.77.6"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "bootstrap": "^5.3.3",
+    "vite": "^5.3.3"
   }
 }
