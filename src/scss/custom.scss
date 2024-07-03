@@ -56,6 +56,10 @@ h1 {
   font-family: var(--fancy-font-family);
 }
 
+.fancy-text {
+  font-family: var(--fancy-font-family);
+}
+
 h2,
 h3,
 h4,
@@ -519,6 +523,10 @@ nav.navbar.navbar-expand-lg.is-sticky {
 
     .row {
       height: 100%;
+
+      .logo-img{
+        height: 400px;
+      }
     }
   }
 }
@@ -994,6 +1002,14 @@ nav.navbar.navbar-expand-lg.is-sticky {
 
   .hero-section {
     padding-top: 150px;
+
+    .container {
+      .row {
+        .logo-img{
+          height: 200px;
+        }
+      }
+    }
   }
 
   .pricing-thumb {
@@ -1029,11 +1045,21 @@ nav.navbar.navbar-expand-lg.is-sticky {
     font-size: 14px;
     padding: 10px 20px;
   }
+
+  .hero-section {
+    .container {
+      .row {
+        .logo-img{
+          height: 150px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 52px;
+    font-size: 30px;
   }
 
   h2 {
@@ -1050,5 +1076,15 @@ nav.navbar.navbar-expand-lg.is-sticky {
 
   h5 {
     font-size: 20px;
+  }
+
+  .hero-section {
+    .container {
+      .row {
+        .logo-img{
+          height: 100px;
+        }
+      }
+    }
   }
 }

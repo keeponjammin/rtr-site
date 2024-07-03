@@ -1,26 +1,26 @@
 <script setup>
 import Header from "./components/header/Header.vue";
-import NavBar from "./components/navbar/NavBar.vue";
+// import NavBar from "./components/navbar/NavBar.vue";
 import Home from "./components/home/Home.vue";
-import About from "./components/about/About.vue";
-import Music from "./components/music/Music.vue";
-import Events from "./components/events/Events.vue";
-import Contact from "./components/contact/Contact.vue";
-import Footer from "./components/footer/Footer.vue";
+// import About from "./components/about/About.vue";
+// import Music from "./components/music/Music.vue";
+// import Events from "./components/events/Events.vue";
+// import Contact from "./components/contact/Contact.vue";
+// import Footer from "./components/footer/Footer.vue";
 </script>
 
 <template>
   <main>
     <Header />
-    <NavBar />
+    <!-- <NavBar /> -->
     <Home />
-    <About />
+    <!-- <About />
     <Music />
     <Events />
-    <Contact />
+    <Contact /> -->
   </main>
-  <footer>
+  <!-- <footer>
     <Footer />
-  </footer>
+  </footer> -->
 </template>
 <style lang="scss" scoped></style>

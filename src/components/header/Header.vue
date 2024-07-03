@@ -6,7 +6,7 @@
           <p class="d-flex me-4 mb-0">
             <i class="bi-cassette custom-icon me-2"></i>
             <strong class="text-dark"
-              >Listen to our latest single <a class="header-link" href="#">HERE</a></strong
+              >Listen to our latest single <a class="header-link" href="https://open.spotify.com/track/1pjNi2AvSRAGJvesIBQGoQ?si=0426996d836543a6">HERE</a></strong
             >
           </p>
         </div>

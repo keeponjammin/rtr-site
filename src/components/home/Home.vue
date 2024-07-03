@@ -5,11 +5,18 @@
     <div class="container d-flex justify-content-center align-items-center">
       <div class="row">
         <div class="col-12 mt-auto mb-5 text-center">
-          <small>Release the River presents</small>
+          <img
+            src="../../images/logo.svg"
+            alt="Release the River logo"
+            class="img-fluid mb-2 logo-img"
+          />
 
-          <h1 class="text-white mb-5">Virtues of the Vile</h1>
+          <h2 class="text-white fancy-text mb-2">Virtues of the Vile</h2>
+          <h1 class="text-white mb-3">Album release show</h1>
 
-          <a class="btn btn-lg custom-btn-lg" href="#"
+          <a
+            class="btn btn-lg custom-btn-lg"
+            href="https://nobel.nl/programma/release-the-river-albumpresentatie-27-sep-2024/"
             ><i class="me-2 bi bi-ticket-detailed"></i> Buy tickets HERE</a
           >
         </div>
@@ -20,7 +27,7 @@
           <div class="date-wrap">
             <h5 class="text-white">
               <i class="custom-icon bi-clock me-2"></i>
-              27<sup>th</sup> of September 2024
+              27<sup>th</sup> of Sept 2024
             </h5>
           </div>
 
@@ -36,17 +43,26 @@
               class="social-icon d-flex align-items-center justify-content-center"
             >
               <li class="social-icon-item">
-                <a href="#" class="social-icon-link">
+                <a
+                  href="https://www.instagram.com/releasetheriverofficial/"
+                  class="social-icon-link"
+                >
                   <span class="bi-instagram"></span>
                 </a>
               </li>
               <li class="social-icon-item">
-                <a href="#" class="social-icon-link">
+                <a
+                  href="https://www.facebook.com/Releasetheriver"
+                  class="social-icon-link"
+                >
                   <span class="bi-facebook"></span>
                 </a>
               </li>
               <li class="social-icon-item">
-                <a href="#" class="social-icon-link">
+                <a
+                  href="https://linktr.ee/releasetheriver"
+                  class="social-icon-link"
+                >
                   <span class="bi-globe2"></span>
                 </a>
               </li>
