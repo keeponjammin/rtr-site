@@ -1,15 +1,21 @@
-const path = require('path')
+const path = require("path");
 
 export default {
-  root: path.resolve(__dirname, 'src'),
+  root: path.resolve(__dirname, "src"),
+  build: {
+    outDir: "dist",
+  },
   resolve: {
     alias: {
-      '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
-      '~bootstrap-icons': path.resolve(__dirname, 'node_modules/bootstrap-icons'),
-    }
+      "~bootstrap": path.resolve(__dirname, "node_modules/bootstrap"),
+      "~bootstrap-icons": path.resolve(
+        __dirname,
+        "node_modules/bootstrap-icons"
+      ),
+    },
   },
   server: {
     port: 8080,
-    hot: true
-  }
-}
+    hot: true,
+  },
+};
