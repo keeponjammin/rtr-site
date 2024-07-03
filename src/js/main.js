@@ -10,3 +10,6 @@ import App from "../App.vue";
 
 // Create a new Vue instance
 createApp(App).mount("#app");
+
+//Import all bootstrap javascript
+import "bootstrap";
