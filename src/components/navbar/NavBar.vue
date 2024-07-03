@@ -28,7 +28,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link click-scroll" href="#section_3">Artists</a>
+            <a class="nav-link click-scroll" href="#section_3">Music</a>
           </li>
 
           <li class="nav-item">
@@ -36,11 +36,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link click-scroll" href="#section_5">Pricing</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+            <a class="nav-link click-scroll" href="#section_5">Contact</a>
           </li>
         </ul>
 
