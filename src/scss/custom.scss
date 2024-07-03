@@ -1,20 +1,21 @@
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@400;700;900&display=swap");
 
 :root {
-  --white-color: #ffffff;
-  --primary-color: #f8cb2e;
-  --secondary-color: #ee5007;
-  --section-bg-color: #f0f8ff;
-  --custom-btn-bg-color: #ee5007;
-  --custom-btn-bg-hover-color: #c01f27;
+  --white-color: #f4eade;
+  --primary-color: #8a7b74;
+  --secondary-color: #4a524e;
+  --custom-btn-bg-color: #303531;
+  --custom-btn-bg-hover-color: #0d0f0d;
   --dark-color: #000000;
-  --p-color: #717275;
-  --border-color: #7fffd4;
-  --link-hover-color: #b22727;
+  --section-bg-color: #f7ede1;
+  --p-color: #8a817c;
+  --border-color: #b3a5a1;
+  --link-hover-color: #222c27;
   --body-font-family: "Almendra", serif;
+  --fancy-font-family: "Cinzel Decorative", serif;
   --h1-font-size: 74px;
   --h2-font-size: 46px;
   --h3-font-size: 32px;
@@ -41,14 +42,6 @@ body {
     TYPOGRAPHY               
   -----------------------------------------*/
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--dark-color);
-}
-
 h1,
 h2,
 h3,
@@ -60,26 +53,30 @@ h6 {
 
 h1 {
   font-size: var(--h1-font-size);
+  font-family: var(--fancy-font-family);
 }
 
-h2 {
-  font-size: var(--h2-font-size);
-}
-
-h3 {
-  font-size: var(--h3-font-size);
-}
-
-h4 {
-  font-size: var(--h4-font-size);
-}
-
-h5 {
-  font-size: var(--h5-font-size);
-}
-
+h2,
+h3,
+h4,
+h5,
 h6 {
-  font-size: var(--h6-font-size);
+  color: var(--dark-color);
+  &.h2 {
+    font-size: var(--h2-font-size);
+  }
+  &.h3 {
+    font-size: var(--h3-font-size);
+  }
+  &.h4 {
+    font-size: var(--h4-font-size);
+  }
+  &.h5 {
+    font-size: var(--h5-font-size);
+  }
+  &.h6 {
+    font-size: var(--h6-font-size);
+  }
 }
 
 p,
@@ -288,7 +285,8 @@ strong {
     CUSTOM BUTTON               
   -----------------------------------------*/
 
-.custom-btn {
+.custom-btn,
+.custom-btn-lg {
   background: var(--custom-btn-bg-color);
   border: 2px solid transparent;
   border-radius: var(--border-radius-large);
@@ -303,6 +301,11 @@ strong {
     background: var(--custom-btn-bg-hover-color);
     color: var(--white-color);
   }
+}
+
+.custom-btn-lg {
+  font-size: 18px;
+  padding: 15px 30px;
 }
 
 .custom-border-btn {
@@ -348,6 +351,18 @@ strong {
   background-color: var(--primary-color);
   padding-top: 12px;
   padding-bottom: 12px;
+
+  .header-link{
+    color: var(--white-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-normal);
+    margin-right: 15px;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  
+  }
 }
 
 /*---------------------------------------
@@ -364,6 +379,10 @@ strong {
   &.is-sticky .navbar {
     background-color: var(--dark-color);
   }
+}
+
+nav.navbar.navbar-expand-lg.is-sticky {
+  background-color: var(--dark-color);
 }
 
 .navbar {
