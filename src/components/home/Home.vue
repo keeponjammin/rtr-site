@@ -1,7 +1,6 @@
 <template>
   <section class="hero-section" id="section_1">
     <div class="section-overlay">
-      <img src="../../images/hero-image.jpg" alt="Hero image" class="hero-image" />
     </div>
 
     <div class="container d-flex justify-content-center align-items-center">
