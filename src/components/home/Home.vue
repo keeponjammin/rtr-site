@@ -1,6 +1,8 @@
 <template>
   <section class="hero-section" id="section_1">
-    <div class="section-overlay"></div>
+    <div class="section-overlay">
+      <img src="../../images/hero-image.jpg" alt="Hero image" class="hero-image" />
+    </div>
 
     <div class="container d-flex justify-content-center align-items-center">
       <div class="row">
@@ -34,7 +36,7 @@
           <div class="location-wrap mx-auto py-3 py-lg-0">
             <h5 class="text-white">
               <i class="custom-icon bi-geo-alt me-2"></i>
-              De Nobel, Leiden
+              Nobel, Leiden
             </h5>
           </div>
 
@@ -72,13 +74,13 @@
       </div>
     </div>
 
-    <div class="video-wrap">
+    <!-- <div class="video-wrap">
       <video autoplay="" loop="" muted="" class="custom-video" poster="">
         <source src="../../video/rtr.mp4" type="video/mp4" />
 
         Your browser does not support the video tag.
       </video>
-    </div>
+    </div> -->
   </section>
 </template>
 
