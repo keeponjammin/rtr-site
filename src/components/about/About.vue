@@ -7,22 +7,24 @@
             <h2 class="text-white mb-4">About Release the River</h2>
 
             <p class="text-white">
-              Festava Live is free CSS template provided by TemplateMo website.
-              This layout is built on Bootstrap v5.2.2 CSS library. You are free
-              to use this template for your commercial website.
+              An unrelenting powertrio rising from the depths of medieval Leiden
+              poised to redefine the landscape of blackened deathmetal. With a
+              mere of three souls they stand as a powerhouse crafting colossal
+              walls of sound and bringing forth musical tempests.
             </p>
 
-            <h6 class="text-white mt-4">Once in Lifetime Experience</h6>
-
             <p class="text-white">
-              You are not allowed to redistribute the template ZIP file on any
-              other website without a permission.
+              A fusion of metal music. Release the River fuses the fiery
+              rhythmic power of deathmetal and hardcore with the haunting
+              atmosphere and blastbeats from the Nordic realms of blackmetal.
             </p>
 
-            <h6 class="text-white mt-4">Whole Night Party</h6>
-
             <p class="text-white">
-              Please tell your friends about our website. Thank you.
+              RELEASE THE RIVER unleashed their debut full-length album,
+              'Virtues of the Vile', in September 2024. This release stands as a
+              testament to the strength found in the unholy trinity of their
+              musical communion. Dive into the abyss with us and explore the
+              vile tendencies of humanity on earth.
             </p>
           </div>
         </div>
@@ -30,7 +32,7 @@
         <div class="col-lg-6 col-12">
           <div class="about-text-wrap">
             <img
-              src="../../images/pexels-alexander-suhorucov-6457579.jpg"
+              src="../../images/band.jpg"
               class="about-image img-fluid"
             />
 
