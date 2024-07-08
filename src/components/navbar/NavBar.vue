@@ -28,7 +28,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link click-scroll" href="#section_3">Music</a>
+            <a class="nav-link click-scroll" href="#section_3">Releases</a>
           </li>
 
           <li class="nav-item">

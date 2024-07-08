@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
-          <div class="services-info">
+          <div class="about-info">
             <h2 class="text-white mb-4">About Release the River</h2>
 
             <p class="text-white">

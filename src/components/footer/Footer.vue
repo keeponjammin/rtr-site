@@ -61,7 +61,7 @@
             </li>
 
             <li class="site-footer-link-item">
-              <a href="#" class="site-footer-link">Artists</a>
+              <a href="#" class="site-footer-link">Releases</a>
             </li>
 
             <li class="site-footer-link-item">
