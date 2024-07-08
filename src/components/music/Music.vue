@@ -7,7 +7,7 @@
                         <h2 class="mb-4">Releases</h2>
                     </div>
 
-                    <div class="col-lg-5 col-12">
+                    <div class="col-lg-4 col-12">
                         <div class="music-thumb">
                             <div class="music-image-wrap">
                                 <img src="../../images/music/virtuesofthevile.jpg"
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-12">
+                    <div class="col-lg-4 col-12">
                         <div class="music-thumb">
                             <div class="music-image-wrap">
                                 <img src="../../images/music/enthralled.jpg"
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-12">
+                    <div class="col-lg-4 col-12">
                         <div class="music-thumb">
                             <div class="music-image-wrap">
                                 <img src="../../images/music/darkmirrorofthesoul.jpg"
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-12">
+                    <div class="col-lg-4 col-12">
                         <div class="music-thumb">
                             <div class="music-image-wrap">
                                 <img src="../../images/music/spiritcorrupt.jpg"
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-12">
+                    <div class="col-lg-4 col-12">
                         <div class="music-thumb">
                             <div class="music-image-wrap">
                                 <img src="../../images/music/frostgod.jpg"
