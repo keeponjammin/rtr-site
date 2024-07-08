@@ -356,7 +356,7 @@ strong {
   padding-top: 12px;
   padding-bottom: 12px;
 
-  .header-link{
+  .header-link {
     color: var(--white-color);
     font-size: var(--p-font-size);
     font-weight: var(--font-weight-normal);
@@ -365,7 +365,6 @@ strong {
     &:hover {
       color: var(--secondary-color);
     }
-  
   }
 }
 
@@ -505,6 +504,11 @@ nav.navbar.navbar-expand-lg.is-sticky {
   padding-top: 100px;
   height: calc(100vh - 51px);
 
+  background-image: url("../images/hero-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
   small {
     color: var(--white-color);
     text-transform: uppercase;
@@ -512,7 +516,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
 
   .section-overlay {
     z-index: 2;
-    opacity: 0.45;
+    opacity: 0.3;
   }
 
   .container {
@@ -524,7 +528,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
     .row {
       height: 100%;
 
-      .logo-img{
+      .logo-img {
         height: 400px;
       }
     }
@@ -1005,7 +1009,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
 
     .container {
       .row {
-        .logo-img{
+        .logo-img {
           height: 200px;
         }
       }
@@ -1049,7 +1053,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
   .hero-section {
     .container {
       .row {
-        .logo-img{
+        .logo-img {
           height: 150px;
         }
       }
@@ -1081,7 +1085,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
   .hero-section {
     .container {
       .row {
-        .logo-img{
+        .logo-img {
           height: 100px;
         }
       }
