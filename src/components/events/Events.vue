@@ -1,36 +1,60 @@
 <script setup>
+import { computed } from "vue";
+
 const events = [
   {
-    date: "2025-04-01",
-    title: "Spring Festival",
-    secondTitle: "Celebration of Nature",
-    thirdTitle: "Outdoor Activities",
-    urlTitle: "Spring Festival Details",
-    url: "https://example.com/spring-festival",
+    date: "2024-09-27",
+    title: "Release the River Album Release Show",
+    secondTitle: "With Black Rabbit and Beyond the Pale",
+    thirdTitle: "",
+    urlTitle: "Nobel, Leiden",
+    urlSubtitle: "Buy tickets here",
+    url: "https://nobel.nl/programma/release-the-river-albumpresentatie-27-sep-2024/",
   },
   {
-    date: "2025-06-15",
-    title: "Summer Solstice",
-    secondTitle: "Longest Day Party",
-    thirdTitle: "Beach Bonfire",
-    urlTitle: "Summer Solstice Information",
-    url: "https://example.com/summer-solstice",
+    date: "2024-10-12",
+    title: "Clubshow",
+    secondTitle: "With Epistulum and Defazer",
+    thirdTitle: "",
+    urlTitle: "Latenstaan, Zoetermeer",
+    urlSubtitle: "More info here",
+    url: "https://www.facebook.com/Latenstaan/events",
   },
   {
-    date: "2025-10-31",
-    title: "Halloween Bash",
-    secondTitle: "Costume Contest",
-    thirdTitle: "Haunted House",
-    urlTitle: "Halloween Bash Details",
-    url: "https://example.com/halloween-bash",
+    date: "2024-10-26",
+    title: "Clubshow",
+    secondTitle: "With Defazer and Rages of Sin",
+    thirdTitle: "",
+    urlTitle: "The Cave, Amsterdam",
+    urlSubtitle: "More info here",
+    url: "https://www.thecaveamsterdam.nl/",
   },
   {
-    date: "2025-12-25",
-    title: "Christmas Gala",
-    secondTitle: "Gift Exchange",
-    thirdTitle: "Christmas Carols",
-    urlTitle: "Christmas Gala Information",
-    url: "https://example.com/christmas-gala",
+    date: "2024-12-07",
+    title: "Clubshow",
+    secondTitle: "",
+    thirdTitle: "",
+    urlTitle: "DB's, Utrecht",
+    urlSubtitle: "Buy tickets here",
+    url: "https://www.dbstudio.nl/",
+  },
+  {
+    date: "2025-03-15",
+    title: "March of the Black Horse indoor festival",
+    secondTitle: "",
+    thirdTitle: "",
+    urlTitle: "Roosendaal",
+    urlSubtitle: "Buy tickets here",
+    url: "https://www.dbstudio.nl/",
+  },
+  {
+    date: "2025-08-16",
+    title: "Triple Threat Metalfest",
+    secondTitle: "",
+    thirdTitle: "",
+    urlTitle: "Megaland, Landgraaf",
+    urlSubtitle: "TBA",
+    url: "",
   },
 ];
 
@@ -42,21 +66,24 @@ const getCurrentDate = () => {
   return `${year}-${month}-${day}`;
 };
 
-const getFutureEvents = () => {
+const futureEvents = computed(() => {
   return events
     .filter((event) => event.date >= getCurrentDate())
     .sort((a, b) => new Date(a.date) - new Date(b.date));
-};
+});
 
-const getPastEvents = () => {
+const pastEvents = computed(() => {
   return events.filter((event) => event.date < getCurrentDate());
-};
+});
+
+const hasFutureEvents = computed(() => futureEvents.value.length > 0);
+const hasPastEvents = computed(() => pastEvents.value.length > 0);
 </script>
 
 <template>
   <section class="schedule-section section-padding" id="section_4">
     <div class="container">
-      <div class="row mb-4">
+      <div v-if="hasFutureEvents" class="row mb-4">
         <div class="col-12 text-center">
           <h2 class="text-white mb-4">Upcoming events</h2>
 
@@ -73,7 +100,7 @@ const getPastEvents = () => {
               </thead>
 
               <tbody>
-                <tr v-for="futureEvent in getFutureEvents()">
+                <tr v-for="futureEvent in futureEvents">
                   <th scope="row">
                     {{ new Date(futureEvent.date).toLocaleDateString("nl-NL") }}
                   </th>
@@ -95,7 +122,7 @@ const getPastEvents = () => {
                         rel="noopener noreferrer"
                       >
                         <i class="bi bi-link-45deg"></i>
-                        {{ futureEvent.thirdTitle }}
+                        {{ futureEvent.urlSubtitle }}
                       </a>
                     </p>
                   </td>
@@ -105,7 +132,7 @@ const getPastEvents = () => {
           </div>
         </div>
       </div>
-      <div class="row">
+      <div v-if="hasPastEvents" class="row">
         <div class="col-12 text-center">
           <h2 class="text-white mb-4">Past events</h2>
 
@@ -122,7 +149,7 @@ const getPastEvents = () => {
               </thead>
 
               <tbody>
-                <tr v-for="pastEvent in getPastEvents()">
+                <tr v-for="pastEvent in pastEvents">
                   <th scope="row">
                     {{ new Date(pastEvent.date).toLocaleDateString("nl-NL") }}
                   </th>
