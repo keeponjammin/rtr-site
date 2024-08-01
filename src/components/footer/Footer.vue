@@ -78,39 +78,27 @@
             <li class="site-footer-link-item">
               <a href="#section_4" class="site-footer-link">Schedule</a>
             </li>
-            <li class="site-footer-link-item">
+            <!-- <li class="site-footer-link-item">
               <a href="#section_" class="site-footer-link">Contact</a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
           <h5 class="site-footer-title mb-3">Have a question?</h5>
 
-          <p class="text-white d-flex mb-1">
-            <a href="tel: 090-080-0760" class="site-footer-link">
-              090-080-0760
-            </a>
-          </p>
-
           <p class="text-white d-flex">
-            <a href="mailto:hello@company.com" class="site-footer-link">
-              hello@company.com
+            <a href="mailto:info@releasetheriver.com" class="site-footer-link">
+              info@releasetheriver.com
             </a>
           </p>
         </div>
         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
           <h5 class="site-footer-title mb-3">Want to book us?</h5>
 
-          <p class="text-white d-flex mb-1">
-            <a href="tel: 090-080-0760" class="site-footer-link">
-              090-080-0760
-            </a>
-          </p>
-
           <p class="text-white d-flex">
-            <a href="mailto:hello@company.com" class="site-footer-link">
-              hello@company.com
+            <a href="book@releasetheriver.com" class="site-footer-link">
+              book@releasetheriver.com
             </a>
           </p>
         </div>

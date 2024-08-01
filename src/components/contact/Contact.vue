@@ -5,7 +5,16 @@
         <div class="col-lg-8 col-12 mx-auto">
           <h2 class="text-center mb-4">Interested? Let's talk</h2>
 
-          <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
+          <p class="text-center mb-5">
+            We are always looking for new opportunities to play and share our
+            music. If you are interested in booking us for a show, please send
+            an email to
+            <a href="mailto:book@releasetheriver.com"
+              >book@releasetheriver.com</a
+            >
+            and we will get back to you as soon as possible.
+          </p>
+          <!-- <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
             <div
               class="tab-pane fade show active"
               id="nav-ContactForm"
@@ -69,7 +78,7 @@
                 </div>
               </form>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
