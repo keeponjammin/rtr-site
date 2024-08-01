@@ -1,116 +1,210 @@
-<template>
-        <section class="music-section section-padding" id="section_3">
-            <div class="container">
-                <div class="row justify-content-center">
-
-                    <div class="col-12 text-center">
-                        <h2 class="mb-4">Meet music</h2>
-                    </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="music-thumb">
-                            <div class="music-image-wrap">
-                                <img src="../../images/music/joecalih-UmTZqmMvQcw-unsplash.jpg"
-                                    class="music-image img-fluid">
-                            </div>
-
-                            <div class="music-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Madona
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    August 16, 1958
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop, R&amp;B
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Madona Official</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="music-thumb">
-                            <div class="music-image-wrap">
-                                <img src="../../images/music/abstral-official-bdlMO9z5yco-unsplash.jpg"
-                                    class="music-image img-fluid">
-                            </div>
-
-                            <div class="music-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Rihana
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    Feb 20, 1988
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Country
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Rihana Official</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="music-thumb">
-                            <img src="../../images/music/soundtrap-rAT6FJ6wltE-unsplash.jpg"
-                                class="music-image img-fluid">
-
-                            <div class="music-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Bruno Bros
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    October 8, 1985
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Bruno Official</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-</template>
-
 <script setup>
+import { computed } from "vue";
+
+const getCurrentDate = () => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0"); // JavaScript months are 0-based.
+  const day = String(today.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
+
+const isVirtuesOfTheVileReleased = computed(() => {
+  const releaseDate = new Date("2024-09-25");
+  const currentDate = new Date(getCurrentDate());
+  return currentDate >= releaseDate;
+});
 
 </script>
+<template>
+  <section class="music-section section-padding" id="section_3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h2 class="mb-4">Releases</h2>
+        </div>
 
-<style lang="scss" scoped>
+        <div v-if="isVirtuesOfTheVileReleased" class="col-lg-4 col-12">
+          <div class="music-thumb">
+            <div class="music-image-wrap">
+              <img
+                src="../../images/music/virtuesofthevile.jpg"
+                class="music-image img-fluid"
+              />
+            </div>
 
-</style>
+            <div class="music-hover">
+              <p>
+                <strong>Name:</strong>
+                Virtues of the Vile
+              </p>
+
+              <p>
+                <strong>Release date:</strong>
+                25th of September 2024
+              </p>
+
+              <p>
+                <strong>Type:</strong>
+                Full length album
+              </p>
+
+              <hr />
+
+              <p class="mb-0">
+                <strong>Available on:</strong>
+                <a href="#">All major streaming platforms</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="music-thumb">
+            <div class="music-image-wrap">
+              <img
+                src="../../images/music/enthralled.jpg"
+                class="music-image img-fluid"
+              />
+            </div>
+
+            <div class="music-hover">
+              <p>
+                <strong>Name:</strong>
+                Enthralled
+              </p>
+
+              <p>
+                <strong>Release date:</strong>
+                24th of April 2024
+              </p>
+
+              <p>
+                <strong>Type:</strong>
+                Single
+              </p>
+
+              <hr />
+
+              <p class="mb-0">
+                <strong>Available on:</strong>
+                <a href="https://open.spotify.com/album/1V94GzoWWJfuTq1FSloTJW"
+                  >All major streaming platforms</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="music-thumb">
+            <div class="music-image-wrap">
+              <img
+                src="../../images/music/darkmirrorofthesoul.jpg"
+                class="music-image img-fluid"
+              />
+            </div>
+
+            <div class="music-hover">
+              <p>
+                <strong>Name:</strong>
+                Dark Mirror of the Soul
+              </p>
+
+              <p>
+                <strong>Release date:</strong>
+                31st of August 2023
+              </p>
+
+              <p>
+                <strong>Type:</strong>
+                Single
+              </p>
+
+              <hr />
+
+              <p class="mb-0">
+                <strong>Available on:</strong>
+                <a href="https://open.spotify.com/album/3mBFwy4IUbQzBQt1zsvy69"
+                  >All major streaming platforms</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="music-thumb">
+            <div class="music-image-wrap">
+              <img
+                src="../../images/music/spiritcorrupt.jpg"
+                class="music-image img-fluid"
+              />
+            </div>
+
+            <div class="music-hover">
+              <p>
+                <strong>Name:</strong>
+                Spirit Corrupt
+              </p>
+
+              <p>
+                <strong>Release date:</strong>
+                11th of February 2022
+              </p>
+
+              <p>
+                <strong>Type:</strong>
+                Extended play
+              </p>
+
+              <hr />
+
+              <p class="mb-0">
+                <strong>Available on:</strong>
+                <a href="https://open.spotify.com/album/1IIDp4ihjJZ8sy4RUQjP5I"
+                  >All major streaming platforms</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="music-thumb">
+            <div class="music-image-wrap">
+              <img
+                src="../../images/music/frostgod.jpg"
+                class="music-image img-fluid"
+              />
+            </div>
+
+            <div class="music-hover">
+              <p>
+                <strong>Name:</strong>
+                Frost god
+              </p>
+
+              <p>
+                <strong>Release date:</strong>
+                26th of February 2021
+              </p>
+
+              <p>
+                <strong>Type:</strong>
+                Single
+              </p>
+
+              <hr />
+
+              <p class="mb-0">
+                <strong>Available on:</strong>
+                <a href="https://releasetheriver.bandcamp.com/track/frost-god"
+                  >Bandcamp</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style lang="scss" scoped></style>

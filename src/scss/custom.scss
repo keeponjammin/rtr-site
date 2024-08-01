@@ -540,11 +540,12 @@ nav.navbar.navbar-expand-lg.is-sticky {
   -----------------------------------------*/
 
 .about-section {
-  background-image: url("../images/edward-unsplash-blur.jpg");
+  background-image: url("../images/about-image.jpg");
   background-color: #704010;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  bottom: 0px;
 }
 
 .about-image {
@@ -585,7 +586,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
   -----------------------------------------*/
 
 .ticket-section {
-  background-image: url("../images/nicholas-green-unsplash-blur.jpg");
+  // background-image: url("../images/nicholas-green-unsplash-blur.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -638,8 +639,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
 }
 
 .music-hover {
-  background-color: var(--primary-color);
-  background-color: rgba(248, 203, 46, 0.75);
+  background-color: var(--white-color);
   border-radius: var(--border-radius-medium);
   backdrop-filter: blur(5px) saturate(180%);
   -webkit-backdrop-filter: blur(5px) saturate(180%);
@@ -655,17 +655,17 @@ nav.navbar.navbar-expand-lg.is-sticky {
 
   p {
     strong {
-      color: var(--white-color);
+      color: var(--primary-color);
       display: inline-block;
       min-width: 180px;
       margin-right: 20px;
     }
 
     a {
-      color: var(--secondary-color);
+      color: var(--primary-color);
 
       &:hover {
-        color: var(--white-color);
+        color: var(--dark-color);
       }
     }
   }
@@ -680,7 +680,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
   -----------------------------------------*/
 
 .schedule-section {
-  background-image: url("../images/nainoa-shizuru-unsplash-blur.jpg");
+  background-image: url("../images/events.jpg");
   background-color: #242424;
   background-repeat: no-repeat;
   background-position: center;
@@ -719,28 +719,11 @@ nav.navbar.navbar-expand-lg.is-sticky {
   }
 
   thead th {
-    border-right: 1px solid #c7460a;
     border-bottom-color: transparent;
-  }
-
-  th + td {
-    border-bottom: 0;
   }
 
   thead th:last-child {
     border-right-color: transparent;
-  }
-
-  .pop-background-image {
-    background-image: url("../images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg");
-  }
-
-  .rock-background-image {
-    background-image: url("../images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg");
-  }
-
-  .country-background-image {
-    background-image: url("../images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg");
   }
 }
 
@@ -872,7 +855,7 @@ nav.navbar.navbar-expand-lg.is-sticky {
 
 .site-footer-top {
   background-color: var(--secondary-color);
-  background-image: url("../images/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg");
+  background-image: url("../images/events.jpg");
   background-repeat: no-repeat;
   margin-bottom: 70px;
   padding-top: 30px;

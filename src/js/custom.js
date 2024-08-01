@@ -2,27 +2,35 @@ document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
   // MENU
-  document.querySelectorAll(".navbar-collapse a").forEach((item) => {
+  const navbarCollapseLinks = document.querySelectorAll(".navbar-collapse a");
+  const toggler = document.querySelector(".navbar-toggler");
+  navbarCollapseLinks.forEach((item) => {
     item.addEventListener("click", function () {
-      document.querySelector(".navbar-collapse").classList.remove("show");
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+      if (navbarCollapse) {
+        navbarCollapse.classList.remove("show");
+        toggler.setAttribute("aria-expanded", "false");
+      }
     });
   });
 
   // CUSTOM LINK
-  document.querySelectorAll(".smoothscroll").forEach((item) => {
+  const smoothScrollLinks = document.querySelectorAll(".smoothscroll");
+  smoothScrollLinks.forEach((item) => {
     item.addEventListener("click", function (e) {
       e.preventDefault();
-      const el = document.querySelector(this.getAttribute("href"));
-      const headerHeight = document.querySelector(".navbar").offsetHeight;
-
-      scrollToDiv(el, headerHeight);
+      const href = this.getAttribute("href");
+      const el = document.querySelector(href);
+      if (el) {
+        const headerHeight = document.querySelector(".navbar").offsetHeight;
+        scrollToDiv(el, headerHeight);
+      }
     });
   });
 
   function scrollToDiv(element, navHeight) {
     const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
     const totalScroll = offsetTop - navHeight;
-
     window.scrollTo({
       top: totalScroll,
       behavior: "smooth",
@@ -30,51 +38,57 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//ClICK SCROLL
 document.addEventListener("DOMContentLoaded", function () {
   const sectionArray = [1, 2, 3, 4, 5, 6];
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+  const clickScrollElements = document.querySelectorAll(".click-scroll");
 
-  sectionArray.forEach((value, index) => {
-    document.addEventListener("scroll", function () {
-      const offsetSection =
-        document.getElementById("section_" + value).getBoundingClientRect()
-          .top +
-        window.pageYOffset -
-        83;
-      const docScroll =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      const docScroll1 = docScroll + 1;
-
-      if (docScroll1 >= offsetSection) {
-        document
-          .querySelectorAll(".navbar-nav .nav-item .nav-link")
-          .forEach((link) => {
-            link.classList.remove("active");
-            link.classList.add("inactive");
-          });
-        document
-          .querySelectorAll(".navbar-nav .nav-item .nav-link")
-          [index].classList.add("active");
-        document
-          .querySelectorAll(".navbar-nav .nav-item .nav-link")
-          [index].classList.remove("inactive");
+  // Single scroll event listener
+  document.addEventListener("scroll", function () {
+    let activeIndex = -1; // Default to -1 if no sections match
+    sectionArray.forEach((value, index) => {
+      const section = document.getElementById("section_" + value);
+      if (section) {
+        const offsetSection =
+          section.getBoundingClientRect().top + window.pageYOffset - 83;
+        const docScroll =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        if (docScroll + 1 >= offsetSection) {
+          activeIndex = index;
+        }
       }
     });
 
-    document
-      .querySelectorAll(".click-scroll")
-      [index].addEventListener("click", function (e) {
-        const offsetClick =
-          document.getElementById("section_" + value).getBoundingClientRect()
-            .top +
-          window.pageYOffset -
-          83;
+    // Update link states based on activeIndex
+    navLinks.forEach((link, index) => {
+      link.classList.remove("active", "inactive");
+      if (index === activeIndex) {
+        link.classList.add("active");
+      } else {
+        link.classList.add("inactive");
+      }
+    });
+  });
+
+  // Attach click event listeners
+  clickScrollElements.forEach((element, index) => {
+    if (sectionArray[index] !== undefined) {
+      // Check if corresponding section exists
+      element.addEventListener("click", function (e) {
         e.preventDefault();
-        window.scrollTo({
-          top: offsetClick,
-          behavior: "smooth",
-        });
+        const section = document.getElementById(
+          "section_" + sectionArray[index]
+        );
+        if (section) {
+          const offsetClick =
+            section.getBoundingClientRect().top + window.pageYOffset - 83;
+          window.scrollTo({
+            top: offsetClick,
+            behavior: "smooth",
+          });
+        }
       });
+    }
   });
 
   // Initial state
