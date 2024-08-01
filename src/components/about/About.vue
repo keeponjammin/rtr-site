@@ -1,3 +1,7 @@
+
+<script setup>
+import { isVirtuesOfTheVileReleased } from '../functions';
+</script>
 <template>
   <section class="about-section section-padding" id="section_2">
     <div class="container">
@@ -19,7 +23,7 @@
               atmosphere and blastbeats from the Nordic realms of blackmetal.
             </p>
 
-            <p class="text-white">
+            <p v-if=isVirtuesOfTheVileReleased class="text-white">
               RELEASE THE RIVER unleashed their debut full-length album,
               'Virtues of the Vile', in September 2024. This release stands as a
               testament to the strength found in the unholy trinity of their
@@ -35,25 +39,11 @@
               src="../../images/band.jpg"
               class="about-image img-fluid"
             />
-
-            <!-- <div class="about-text-info d-flex">
-              <div class="d-flex">
-                <i class="about-text-icon bi-person"></i>
-              </div>
-
-              <div class="ms-4">
-                <h3>a happy moment</h3>
-
-                <p class="mb-0">your amazing festival experience with us</p>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
-
-<script setup></script>
 
 <style lang="scss" scoped></style>
