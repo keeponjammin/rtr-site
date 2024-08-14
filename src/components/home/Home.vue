@@ -17,7 +17,7 @@
 
           <a
             class="btn btn-lg custom-btn-lg"
-            href="https://nobel.nl/programma/release-the-river-albumpresentatie-27-sep-2024/"
+            href="https://nobel.nl/agenda/release-river-album-release-27-sep-2024"
             ><i class="me-2 bi bi-ticket-detailed"></i> Buy tickets HERE</a
           >
         </div>
