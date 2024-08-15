@@ -3,14 +3,16 @@ import { ref } from "vue";
 
 const password = ref("");
 const isPasswordCorrect = ref(false);
+const errorMessage = ref("");
 
 const correctPassword = "enthralled";
 
 const checkPassword = () => {
   if (password.value === correctPassword) {
     isPasswordCorrect.value = true;
+    errorMessage.value = ""; // Clear any previous error message
   } else {
-    alert("Incorrect password");
+    errorMessage.value = "Incorrect password. Please try again.";
   }
 };
 </script>
@@ -32,6 +34,7 @@ const checkPassword = () => {
           <h1 class="text-white mb-3">Presskit</h1>
 
           <div v-if="!isPasswordCorrect">
+            <p v-if="errorMessage" class="text-danger">{{ errorMessage }}</p>
             <form @submit.prevent="checkPassword">
               <input
                 type="password"
