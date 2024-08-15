@@ -29,9 +29,10 @@ const checkPassword = () => {
             alt="Release the River logo"
             class="img-fluid mb-2 logo-img"
           />
-
-          <h2 class="text-white fancy-text mb-2">Virtues of the Vile</h2>
           <h1 class="text-white mb-3">Presskit</h1>
+          <p class="text-white mt-3">
+            In this presskit you will find the band's biography, music, visuals, and more.
+          </p>
 
           <div v-if="!isPasswordCorrect">
             <p v-if="errorMessage" class="text-danger">{{ errorMessage }}</p>
