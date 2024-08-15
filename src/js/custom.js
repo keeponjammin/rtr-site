@@ -92,17 +92,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Initial state
-  document
-    .querySelectorAll(".navbar-nav .nav-item .nav-link")
-    .forEach((link) => {
-      link.classList.add("inactive");
-    });
-  document
-    .querySelectorAll(".navbar-nav .nav-item .nav-link")[0]
-    .classList.add("active");
-  document
-    .querySelectorAll(".navbar-nav .nav-item .nav-link")[0]
-    .classList.remove("inactive");
+  // document
+  //   .querySelectorAll(".navbar-nav .nav-item .nav-link")
+  //   .forEach((link) => {
+  //     link.classList.add("inactive");
+  //   });
+  // document
+  //   .querySelectorAll(".navbar-nav .nav-item .nav-link")[0]
+  //   .classList.add("active");
+  // document
+  //   .querySelectorAll(".navbar-nav .nav-item .nav-link")[0]
+  //   .classList.remove("inactive");
 });
 
 //STICKY
@@ -127,18 +127,18 @@ class Sticky {
   }
 
   init() {
-    this.wrapper = document.createElement("div");
-    this.wrapper.setAttribute("class", this.options.wrapperClassName);
-    this.element.parentNode.insertBefore(this.wrapper, this.element);
-    this.wrapper.appendChild(this.element);
+    // this.wrapper = document.createElement("div");
+    // this.wrapper.setAttribute("class", this.options.wrapperClassName);
+    // this.element.parentNode.insertBefore(this.wrapper, this.element);
+    // this.wrapper.appendChild(this.element);
 
-    this.calculateWidth();
-    this.setWrapperHeight();
+    // this.calculateWidth();
+    // this.setWrapperHeight();
 
-    window.addEventListener("scroll", this.scrollCheck.bind(this));
-    window.addEventListener("resize", this.resize.bind(this));
+    // window.addEventListener("scroll", this.scrollCheck.bind(this));
+    // window.addEventListener("resize", this.resize.bind(this));
 
-    this.scrollCheck();
+    // this.scrollCheck();
   }
 
   calculateWidth() {
