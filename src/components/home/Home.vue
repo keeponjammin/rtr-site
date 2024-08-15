@@ -32,16 +32,18 @@ const checkPassword = () => {
           <h1 class="text-white mb-3">Presskit</h1>
 
           <div v-if="!isPasswordCorrect">
-            <input
-              type="password"
-              v-model="password"
-              placeholder="Enter password"
-              class="form-control mb-2"
-              @keyup.enter="checkPassword"
-            />
-            <button class="btn btn-lg custom-btn-lg" @click="checkPassword">
-              Submit
-            </button>
+            <form @submit.prevent="checkPassword">
+              <input
+                type="password"
+                v-model="password"
+                placeholder="Enter password"
+                class="form-control mb-2"
+                autocomplete="new-password"
+              />
+              <button type="submit" class="btn btn-lg custom-btn-lg">
+                Submit
+              </button>
+            </form>
           </div>
 
           <a v-if="isPasswordCorrect" class="btn btn-lg custom-btn-lg" href="#">
