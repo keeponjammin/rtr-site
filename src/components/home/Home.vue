@@ -1,7 +1,23 @@
+<script setup>
+import { ref } from "vue";
+
+const password = ref("");
+const isPasswordCorrect = ref(false);
+
+const correctPassword = "enthralled";
+
+const checkPassword = () => {
+  if (password.value === correctPassword) {
+    isPasswordCorrect.value = true;
+  } else {
+    alert("Incorrect password");
+  }
+};
+</script>
+
 <template>
   <section class="hero-section" id="section_1">
-    <div class="section-overlay">
-    </div>
+    <div class="section-overlay"></div>
 
     <div class="container d-flex justify-content-center align-items-center">
       <div class="row">
@@ -13,32 +29,29 @@
           />
 
           <h2 class="text-white fancy-text mb-2">Virtues of the Vile</h2>
-          <h1 class="text-white mb-3">Album release show</h1>
+          <h1 class="text-white mb-3">Presskit</h1>
 
-          <a
-            class="btn btn-lg custom-btn-lg"
-            href="https://nobel.nl/programma/release-the-river-albumpresentatie-27-sep-2024/"
-            ><i class="me-2 bi bi-ticket-detailed"></i> Buy tickets HERE</a
-          >
+          <div v-if="!isPasswordCorrect">
+            <input
+              type="password"
+              v-model="password"
+              placeholder="Enter password"
+              class="form-control mb-2"
+              @keyup.enter="checkPassword"
+            />
+            <button class="btn btn-lg custom-btn-lg" @click="checkPassword">
+              Submit
+            </button>
+          </div>
+
+          <a v-if="isPasswordCorrect" class="btn btn-lg custom-btn-lg" href="#">
+            <i class="me-2 bi bi-download"></i> Download Presskit
+          </a>
         </div>
 
         <div
-          class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center"
+          class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center align-items-center justify-content-center"
         >
-          <div class="date-wrap">
-            <h5 class="text-white">
-              <i class="custom-icon bi-clock me-2"></i>
-              27<sup>th</sup> of Sept 2024
-            </h5>
-          </div>
-
-          <div class="location-wrap mx-auto py-3 py-lg-0">
-            <h5 class="text-white">
-              <i class="custom-icon bi-geo-alt me-2"></i>
-              Nobel, Leiden
-            </h5>
-          </div>
-
           <div class="social-share">
             <ul
               class="social-icon d-flex align-items-center justify-content-center"
@@ -72,17 +85,16 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="video-wrap">
-      <video autoplay="" loop="" muted="" class="custom-video" poster="">
-        <source src="../../video/rtr.mp4" type="video/mp4" />
-
-        Your browser does not support the video tag.
-      </video>
-    </div> -->
   </section>
 </template>
 
-<script setup></script>
+<style lang="scss" scoped>
+.form-control {
+  max-width: 300px;
+  margin: 0 auto;
+}
 
-<style lang="scss" scoped></style>
+.custom-btn-lg {
+  margin-top: 10px;
+}
+</style>
