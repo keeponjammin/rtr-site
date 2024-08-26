@@ -11,25 +11,16 @@ const downloadLink = ref("");
 const checkPassword = async () => {
   if (password.value === correctPassword) {
     isPasswordCorrect.value = true;
-    await fetchDownloadLink();
-
-    console.log(downloadLink.value);
+    fetchDownloadLink();
     errorMessage.value = ""; // Clear any previous error message
   } else {
     errorMessage.value = "Incorrect password. Please try again.";
   }
 };
 
-const fetchDownloadLink = async () => {
-  try {
-    const response = await fetch(
-      "https://rtr-site.jeroen-serdijn.workers.dev/generate-signed-url"
-    );
-    const data = await response.json();
-    downloadLink.value = data.url;
-  } catch (error) {
-    console.error("Error fetching download link:", error);
-  }
+const fetchDownloadLink = () => {
+  //I tried something nice here but workers sure are a bitch.
+  downloadLink.value  = 'https://sg6tfyvvlkcj2rctwlqbudicjbyvryl27n6.releasetheriver.com/presskit.zip'
 };
 </script>
 
@@ -70,7 +61,7 @@ const fetchDownloadLink = async () => {
           <a
             v-if="isPasswordCorrect"
             class="btn btn-lg custom-btn-lg"
-            href="/assets/presskit.zip"
+            :href="downloadLink"
             download
           >
             <i class="me-2 bi bi-download"></i> Download Presskit
