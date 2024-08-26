@@ -50,7 +50,7 @@ const checkPassword = () => {
             </form>
           </div>
 
-          <a v-if="isPasswordCorrect" class="btn btn-lg custom-btn-lg" href="/presskit.zip" download>
+          <a v-if="isPasswordCorrect" class="btn btn-lg custom-btn-lg" href="/assets/presskit.zip" download>
             <i class="me-2 bi bi-download"></i> Download Presskit
           </a>
         </div>
