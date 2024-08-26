@@ -6,13 +6,29 @@ const isPasswordCorrect = ref(false);
 const errorMessage = ref("");
 
 const correctPassword = "enthralled";
+const downloadLink = ref("");
 
-const checkPassword = () => {
+const checkPassword = async () => {
   if (password.value === correctPassword) {
     isPasswordCorrect.value = true;
+    await fetchDownloadLink();
+
+    console.log(downloadLink.value);
     errorMessage.value = ""; // Clear any previous error message
   } else {
     errorMessage.value = "Incorrect password. Please try again.";
+  }
+};
+
+const fetchDownloadLink = async () => {
+  try {
+    const response = await fetch(
+      "https://rtr-site.jeroen-serdijn.workers.dev/generate-signed-url"
+    );
+    const data = await response.json();
+    downloadLink.value = data.url;
+  } catch (error) {
+    console.error("Error fetching download link:", error);
   }
 };
 </script>
@@ -31,7 +47,8 @@ const checkPassword = () => {
           />
           <h1 class="text-white mb-3">Presskit</h1>
           <p class="text-white mt-3">
-            In this presskit you will find the band's biography, music, visuals, and more.
+            In this presskit you will find the band's biography, music, visuals,
+            and more.
           </p>
 
           <div v-if="!isPasswordCorrect">
@@ -50,7 +67,12 @@ const checkPassword = () => {
             </form>
           </div>
 
-          <a v-if="isPasswordCorrect" class="btn btn-lg custom-btn-lg" href="/assets/presskit.zip" download>
+          <a
+            v-if="isPasswordCorrect"
+            class="btn btn-lg custom-btn-lg"
+            href="/assets/presskit.zip"
+            download
+          >
             <i class="me-2 bi bi-download"></i> Download Presskit
           </a>
         </div>
