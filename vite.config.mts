@@ -1,12 +1,23 @@
-import path from 'path';
-import vue from '@vitejs/plugin-vue'; // Import the Vue plugin
+import path from "path";
+import vue from "@vitejs/plugin-vue";
+import copy from "rollup-plugin-copy";
 
 export default {
-  plugins: [vue()], // Add the Vue plugin to the plugins array
-  root: path.resolve(__dirname, "src"), // Make sure this points to the directory containing `index.html`
+  plugins: [
+    vue(),
+    copy({
+      targets: [
+        {
+          src: "src/assets/**/*", // Use a glob pattern to match all files in the assets directory
+          dest: "dist/assets", // Destination directory
+        },
+      ],
+      hook: "writeBundle", // Ensure the copy happens after the bundle is written
+    }),
+  ],
+  root: path.resolve(__dirname, "src"),
   build: {
-    outDir: "../dist",
-    assetsDir: "assets",
+    outDir: path.resolve(__dirname, "dist"), // Ensure the path is correctly resolved
   },
   resolve: {
     alias: {
