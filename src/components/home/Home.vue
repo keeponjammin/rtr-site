@@ -20,7 +20,7 @@ const checkPassword = async () => {
 
 const fetchDownloadLink = () => {
   //I tried something nice here but workers sure are a bitch.
-  downloadLink.value  = 'https://sg6tfyvvlkcj2rctwlqbudicjbyvryl27n6.releasetheriver.com/presskit.zip'
+  downloadLink.value  = 'https://sg6tfyvvlkcj2rctwlqbudicjbyvryl27n6.releasetheriver.com/.%5Cpresskit.zip'
 };
 </script>
 
