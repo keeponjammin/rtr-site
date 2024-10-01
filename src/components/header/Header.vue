@@ -6,7 +6,12 @@
           <p class="d-flex me-4 mb-0">
             <i class="bi-cassette custom-icon me-2"></i>
             <strong class="text-dark"
-              >Listen to our latest single <a class="header-link" href="https://open.spotify.com/track/1pjNi2AvSRAGJvesIBQGoQ?si=0426996d836543a6">HERE</a></strong
+              >Buy our latest album
+              <a
+                class="header-link"
+                href="https://releasetheriver.bandcamp.com/album/virtues-of-the-vile"
+                >HERE</a
+              ></strong
             >
           </p>
         </div>

@@ -13,16 +13,16 @@
           />
 
           <h2 class="text-white fancy-text mb-2">Virtues of the Vile</h2>
-          <h1 class="text-white mb-3">Album release show</h1>
+          <h1 class="text-white mb-3">Available now</h1>
 
           <a
             class="btn btn-lg custom-btn-lg"
-            href="https://nobel.nl/agenda/release-river-album-release-27-sep-2024"
-            ><i class="me-2 bi bi-ticket-detailed"></i> Buy tickets HERE</a
+            href="https://distrokid.com/hyperfollow/releasetheriver/virtues-of-the-vile"
+            ><i class="me-2 bi bi-music-note"></i>Listen here</a
           >
         </div>
 
-        <div
+        <!-- <div
           class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center"
         >
           <div class="date-wrap">
@@ -69,7 +69,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
