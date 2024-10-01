@@ -45,6 +45,14 @@
               </li>
               <li class="social-icon-item">
                 <a
+                  href="https://releasetheriver.bandcamp.com/"
+                  class="social-icon-link"
+                >
+                  <span class="bi-boombox"></span>
+                </a>
+              </li>
+              <li class="social-icon-item">
+                <a
                   href="https://linktr.ee/releasetheriver"
                   class="social-icon-link"
                 >
