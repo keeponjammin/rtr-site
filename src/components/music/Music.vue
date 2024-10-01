@@ -38,7 +38,7 @@ import { isVirtuesOfTheVileReleased } from "../functions";
 
               <p class="mb-0">
                 <strong>Available on:</strong>
-                <a href="#">All major streaming platforms</a>
+                <a href="https://distrokid.com/hyperfollow/releasetheriver/virtues-of-the-vile">All major streaming platforms</a>
               </p>
             </div>
           </div>
